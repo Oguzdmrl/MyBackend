@@ -18,9 +18,12 @@ namespace Business.ServiceRegistrations
             services.AddEndpointsApiExplorer();
             services.AddMediatR(AppDomain.CurrentDomain.GetAssemblies());
             services.AddTransient(typeof(IUnitOfWork), typeof(UnitOfWork));
+
+            #region Todos refactor
             services.AddTransient(typeof(IBaseRepository<>), typeof(BaseRepository<>)); // Düzenlenicek
             services.AddTransient(typeof(BaseRepository<>)); // Düzenlenicek
-         
+            #endregion
+           
             services.AddHttpContextAccessor();
             services.AddTransient<IHttpContextAccessor, HttpContextAccessor>();
 
