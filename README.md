@@ -1,1 +1,3 @@
 # MyBackend
+
+CQRS, MediaTR, EfCore & Generic UnitOfWork & Repository Pattern, N Tieer Architecture-Cqrs pattern...
